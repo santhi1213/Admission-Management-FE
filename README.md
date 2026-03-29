@@ -160,6 +160,7 @@ API Integration
 The frontend communicates with a backend REST API running on http://localhost:5000/api. The following endpoints are used:
 
 Endpoint	Method	Purpose
+
 /api/auth/login	POST	User authentication
 /api/dashboard	GET	Dashboard statistics
 /api/applicants	GET/POST	Applicant management
@@ -172,6 +173,7 @@ Endpoint	Method	Purpose
 /api/allocation/confirm/:applicantId	POST	Confirm admission
 /api/allocation/:applicantId/fee	PATCH	Update fee status
 /api/applicants/:applicantId/documents	PATCH	Update document status
+
 Authentication Flow
 User submits login credentials
 
