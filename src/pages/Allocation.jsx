@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import toast from 'react-hot-toast';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://admission-management-be.onrender.com/api';
 
 const Allocation = () => {
   const [applicants, setApplicants] = useState([]);
