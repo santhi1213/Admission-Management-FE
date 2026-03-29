@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 
 const AuthContext = createContext();
 
-const API_URL = 'https://admission-management-be.onrender.com/api';
+const API_URL = 'http://localhost:5000/api';
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
