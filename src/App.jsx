@@ -1,16 +1,10 @@
-// frontend/src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-// import Login from './pages/Login';
 import Login from './pages/Login';
-// import Dashboard from './pages/Dashboard';
 import Dashboard from './pages/Dashboard';
-// import Programs from './pages/Programs';
 import Programs from './pages/Programs';
-// import Applicants from './pages/Applicants';
 import Applicants from './pages/Applicants';
-// import Allocation from './pages/Allocation';
 import Allocation from './pages/Allocation';
 import { AuthProvider } from './contexts/AuthContext';
 import PrivateRoute from './components/PrivateRoute';

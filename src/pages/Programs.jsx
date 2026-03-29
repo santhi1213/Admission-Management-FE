@@ -1,4 +1,3 @@
-// frontend/src/pages/Programs.js
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import toast from 'react-hot-toast';
@@ -182,15 +181,15 @@ const handleCreateProgram = async (e) => {
       entryType: formData.program.entryType,
       admissionMode: formData.program.admissionMode,
       academicYear: formData.program.academicYear,
-      totalIntake: formData.program.totalIntake,  // Changed from totalSeats to totalIntake
+      totalIntake: formData.program.totalIntake, 
       quotas: formData.program.quotas.map(quota => ({
         type: quota.type,
-        totalSeats: quota.seats,  // Map seats to totalSeats
+        totalSeats: quota.seats,  
         filledSeats: 0
       }))
     };
     
-    console.log('Sending program data:', programData); // For debugging
+    console.log('Sending program data:', programData);
     
     const response = await fetch(`${API_URL}/masters/programs`, {
       method: 'POST',
@@ -203,7 +202,7 @@ const handleCreateProgram = async (e) => {
     
     if (!response.ok) {
       const error = await response.json();
-      console.error('Server error:', error); // For debugging
+      console.error('Server error:', error); 
       throw new Error(error.errors?.[0]?.msg || error.error || 'Failed to create program');
     }
     
@@ -230,7 +229,7 @@ const handleCreateProgram = async (e) => {
       }
     });
   } catch (error) {
-    console.error('Create program error:', error); // For debugging
+    console.error('Create program error:', error); 
     toast.error(error.message);
   }
 };

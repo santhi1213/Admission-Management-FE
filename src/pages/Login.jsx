@@ -1,4 +1,3 @@
-// frontend/src/pages/Login.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
@@ -17,7 +16,7 @@ const Login = () => {
       await login(email, password);
       navigate('/dashboard');
     } catch (error) {
-      // Error handled in auth context
+      console.log('Login error:', error)
     } finally {
       setLoading(false);
     }

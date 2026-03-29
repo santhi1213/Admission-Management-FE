@@ -1,4 +1,3 @@
-// frontend/src/components/Layout.js
 import React from 'react';
 import { Outlet, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';

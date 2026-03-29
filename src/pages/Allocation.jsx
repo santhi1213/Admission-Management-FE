@@ -146,14 +146,12 @@ const Allocation = () => {
     }
   };
 
-// frontend/src/pages/Allocation.jsx - Remove Authorization header for fee update
 const handleUpdateFee = async (applicantId, status) => {
   try {
     const response = await fetch(`${API_URL}/allocation/${applicantId}/fee`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
-        // REMOVED Authorization header
       },
       body: JSON.stringify({ feeStatus: status }),
     });
